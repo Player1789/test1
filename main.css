@@ -1,0 +1,1000 @@
+* {
+    padding: 0; margin: 0; box-sizing: border-box;
+}
+html{
+    font-family: Segoe UI;
+}
+
+/*Header setting*/
+header {
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*    border: 3px blue solid;*/
+    background: rgba(255,255,255,0.9);
+    position: fixed;
+    z-index: 1;
+}
+
+.header {
+/*    border: 1px red solid;*/
+    width: 100%;
+    max-width: 1790px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header_content {
+    flex: 1 1;
+    height: 69px;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: flex-start;
+    font-weight: 600;
+}
+
+.header ul li{
+    height: 100%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header ul li:hover{
+    background:rgb(235,28,36);
+    color:white;
+}
+
+.header .logo  {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+}
+
+.header .logo img {
+    height: 68%;
+}
+.header .p{
+    font-weight: 800;
+    color: rgb(20, 128, 196);
+    align-items: center;
+    display: flex;
+    align-items: ;
+    justify-content: flex-end;
+}
+.header .p{
+    position: relative;
+    right: 1em;
+}
+.header .p div{
+    padding: 0 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header .p div:hover{
+    color: white;
+    background-color: rgb(20, 128, 196);
+}
+
+/*Hamburger Setting*/
+header .hamburger {
+    display: none;
+    position: absolute;
+    left: 1em;
+}
+header .hamburger span{
+    display: block;
+    width: 15px;
+    height: 2px;
+    margin: 3px;
+    background-color: black;
+}
+
+/*Dot Menu Setting*/
+#dot {
+    position: absolute;
+    padding: 1em;
+    right: 1em;
+    display: none;
+}
+
+/*Header Media Query*/
+@media(max-width: 1000px){
+    .header_content ul {
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        top: 70px;
+        left:0px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(255,255,255,0.9);
+        display: none;
+    }
+    .header_content li {
+        text-align: center;
+    }
+    header .hamburger{
+        display: block;
+    }
+}
+
+@media(max-width: 761px){
+    .header .p{
+        display: none;
+    }
+    
+    #dot{
+        display: block
+    }
+}
+
+/*Section_1 Setting*/
+.section_1 .container_1{
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+}
+
+.section_1 .container_1 .photo {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url(./img/background_1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_1 .container_1 .logo {
+    width: 15%;
+    position: absolute;
+}
+@media(max-width:1025px){
+    .section_1 .container_1 .logo {
+        width: 30%;
+    }
+}
+@media(max-width:600px){
+    .section_1 .container_1 .logo {
+        width: 60%;
+    }
+}
+
+
+/*Section_2 Setting*/
+.section_2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+/*스시 헤드*/
+.section_2 .head {
+    font-size: 3.3rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 2.0rem;
+}
+
+/*스시 네비게이션*/
+.section_2 .nav{
+    background-color: rgba(255,255,255,0.7);
+    padding-bottom: 1rem;
+    margin-bottom: 3.125rem;
+}
+
+.section_2 .nav ul{
+    list-style: none;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.section_2 .nav .select {
+    border-top: 4px rgb(255,102,51) solid;
+    font-weight: 700;
+    color: rgb(255,102,51);
+}
+
+.section_2 .nav li{
+    padding-top: 1rem;
+    text-transform: uppercase;
+    margin: 0 2.9rem;
+    color: rgba(0,0,0,0.5)
+}
+/*스시 그리드 세팅*/
+.section_2 .container{
+    position: relative;
+    height: 30rem; 
+    display: grid;
+    grid-template-columns: 1.5fr 2.5fr;
+    grid-template-rows: 15rem 15rem;
+    grid-column-gap: 6rem;
+}
+/*스시 정보*/
+.section_2 .container .info {
+    grid-column: 1/2;
+    grid-row: 1/2;
+} 
+
+.section_2 .container .info .name {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: -1.5rem;
+    margin-bottom: 1.2rem;
+    color: rgb(255,102,51);
+}
+
+.section_2 .container .info .description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.section_2 .container .sushi img{
+    height: 16rem;
+    width: auto;
+    position: absolute;
+    left: -1rem;
+    bottom: 0;
+}
+
+/*스시 배경사진*/
+.section_2 .container .photo {
+    background-image: url(img/inari_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 1/3;
+    height: inherit;
+}
+
+/*장식사진*/
+.section_2_container {
+    position: relative;
+    overflow-x: hidden;
+}
+
+#salmon{
+    position: absolute;
+    z-index: -2;
+    opacity: 0.4;
+    width: 30rem;
+    right: -15rem;
+    margin-top: -200px;
+}
+/*Section_2 미디어쿼리*/
+
+@media (max-width: 1000px){
+.section_2 {
+    width: 85vw;
+}
+.section_2 .container {
+    grid-column-gap: 3rem;
+}
+.section_2 .container .sushi img{
+    height: 12rem;
+}
+}
+
+@media (max-width:765px){
+.section_2 {
+    height: 700px;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+.section_2 .head{
+    font-size: 4rem;
+    margin: 1.5rem 0;
+}
+.section_2 .container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr
+}
+.section_2 .container .photo {
+    display: none;
+}
+.section_2 .photo_wrapper {
+    overflow: hidden;
+}
+.section_2 .container .info {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    text-align: center;
+}
+.section_2 .container .info .description{
+    font-size: 1rem;
+}
+.section_2 .container .info .name {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+.section_2 .container .sushi{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.section_2 .container .sushi img {
+    position: relative;
+    height: 15rem
+}
+.section_2 .nav {
+    display: none;
+}
+#salmon{
+    width: 25rem;
+    left: 15vw;
+}
+}
+
+/*Section_3 Setting*/
+.section_3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-top: 15rem;
+    margin-bottom: 10rem;
+}
+/*핫밀 헤드*/
+.section_3 .head {
+    font-size: 3.3rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 2.0rem;
+}
+
+/*핫밀 네비게이션*/
+.section_3 .nav{
+    background-color: rgba(255,255,255,0.7);
+    padding-bottom: 1rem;
+    margin-bottom: 3.125rem;
+}
+
+.section_3 .nav ul{
+    list-style: none;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.section_3 .nav .select {
+    border-top: 4px rgb(207,67,21) solid;
+    font-weight: 700;
+    color: rgb(207,67,21);
+}
+
+.section_3 .nav li{
+    padding-top: 1rem;
+    text-transform: uppercase;
+    margin: 0 2.9rem;
+    color: rgba(0,0,0,0.5)
+}
+
+/*핫밀 그리드 세팅*/
+.section_3 .container{
+    position: relative;
+    height: 30rem; 
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr;
+    grid-template-rows: 15rem 15rem;
+    grid-column-gap: 6rem;
+}
+/*핫밀 정보*/
+.section_3 .container .info {
+    grid-column: 2/3;
+    grid-row: 1/2;
+} 
+
+.section_3 .container .info .name {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: -1.5rem;
+    margin-bottom: 1.2rem;
+    color: rgb(207,67,21);
+}
+
+.section_3 .container .info .description {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.section_3 .container .sushi{
+    position: relative;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.section_3 .container .sushi img{
+    height: 16rem;
+    width: auto;
+    position: absolute;
+    left: -1rem;
+    bottom: 0;
+}
+
+/*핫밀 배경사진*/
+.section_3 .container .photo {
+    background-image: url(img/noodles_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    height: inherit;
+}
+
+/*장식사진*/
+.section_3_container {
+    position: relative;
+    overflow-x: hidden;
+}
+
+#rice{
+    position: absolute;
+    z-index: -2;
+    left: -10rem;
+}
+/*Section_3 미디어쿼리*/
+
+@media (max-width: 1000px){
+
+.section_3 {
+    width: 85vw;
+}
+.section_3 .container .sushi img{
+    height: 12rem;
+}
+.section_3 .container {
+    grid-column-gap: 3rem;
+}
+}
+
+@media (max-width:765px){
+.section_3 {
+    height: 700px;
+    padding: 0 20px;
+    margin-top: 20px;
+}
+.section_3 .head{
+    font-size: 4rem;
+    margin: 1.5rem 0;
+}
+.section_3 .container{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr
+}
+.section_3 .container .photo {
+    display: none;
+}
+.section_3 .photo_wrapper {
+    overflow: hidden;
+}
+.section_3 .container .info {
+    padding: 0 20px;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    text-align: center;
+}
+.section_3 .container .info .name {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+.section_3 .container .info .description{
+    font-size: 1rem;
+}
+.section_3 .container .sushi{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1/2;
+    grid-column: 1/2;
+}
+.section_3 .container .sushi img {
+    position: relative;
+    height: 15rem;
+    left: 0.3rem;
+}
+.section_3 .nav {
+    display: none;
+}
+#rice{
+    height: 700px;
+    left: 0;
+}
+}
+
+/*Section_4 Setting*/
+    /*배경 세팅*/
+.section_4 {
+    position: relative;
+    margin-top: 200px;
+    width: 100vw;
+    max-width: 100%;
+    height: 450px;
+    background-image: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1)), url(img/AYCE_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+}
+    /*중앙 세팅*/
+.section_4 .info {
+    display: grid;
+    width: 80vw;
+    max-width: 1120px;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    justify-items:center;
+    align-items: center;
+}
+
+.section_4 .info .logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 360px;
+    position: relative;
+    top: 30px;
+    
+}
+
+.section_4 .info p{
+    align-self: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 0 15px;
+}
+
+.section_4 .info button{
+    grid-column: 2/3;
+    width: 40%;
+    margin: 0 auto;
+    position: relative;
+    bottom: 20px;
+    padding: 12px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color:rgb(237,31,35);
+    border-radius: 8px;
+    box-shadow: 3px 3px 0px rgb(20,128,196);
+}
+    /*미디어 쿼리*/
+@media(max-width:1170px){
+    .section_4{
+        background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(img/AYCE_background.jpg);
+    }
+    .section_4 .info {
+        width: 90vw;
+    }
+    .section_4 .info p{
+        font-size: 1.2rem;
+        line-height: 1.4;
+    }
+    .section_4 .info .logo{
+        width: 250px;
+    }
+    .section_4 .info button{
+        width: 50%;
+        bottom: -20px;
+    }
+}
+
+@media(max-width:765px){
+    .section_4 {
+        margin-top: 10px;
+    }
+    .section_4 .info {
+        display: flex;
+        flex-direction: column;
+    }
+    .section_4 .info p{
+        display: none;
+    }
+    
+    .section_4 .info .logo{
+        width: 50%;
+        min-width: 250px;
+        position: static;
+        margin-bottom: 20px;
+    }
+}
+
+/*Section_5 Setting*/
+    /*배경 세팅*/
+.section_5 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 10rem;
+    margin-bottom: 20px;
+}
+
+    /*헤드*/
+.section_5 .head {
+    font-size: 3.3rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 2.0rem;
+}
+
+    /*네비게이션*/
+.section_5 .nav{
+    background-color: rgba(255,255,255,0.7);
+    padding-bottom: 1rem;
+    margin-bottom: 3.125rem;
+}
+
+.section_5 .nav ul{
+    list-style: none;
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.section_5 .nav .select {
+    border-top: 4px rgb(233,73,67) solid;
+    font-weight: 700;
+    color: rgb(233,73,67);
+}
+
+.section_5 .nav li{
+    padding-top: 1rem;
+    text-transform: uppercase;
+    margin: 0 2.9rem;
+    color: rgba(0,0,0,0.5)
+}
+
+    /*그리드 세팅*/
+.section_5 .container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+    /*그리드 항목*/
+.section_5 .container .info {
+    width: 355px;
+    margin: 2.2rem;
+    display: grid;
+    grid-template-rows: 3rem 1rem 5rem 4rem 3rem;
+    grid-row-gap: 1rem;
+    align-items: center;
+}
+
+.section_5 .container .name {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: -1rem;
+}
+
+.section_5 .container .line{
+    width: 50%;
+    height: 3px;
+    background-color: black;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.section_5 .container .address{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.section_5 .container .trading_hours {
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.section_5 .container .phone_menu {
+    font-weight: 500;
+    display: flex;
+}
+
+.section_5 .container .phone {
+    font-size: 1.1rem;
+    margin-right: 1.3rem;
+}
+
+.section_5 .container .menu{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    width: 130px;
+    color: white;
+    background-color: black;
+    padding: 3px 20px;
+}
+
+@media(max-width:765px){
+    .section_5 .nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .section_5 .nav ul li{
+        margin: 1rem;
+        text-align: center;
+    }
+    .section_5 .info:first-child{
+        margin-top: -1rem;
+    }
+}
+
+/*간장병과 간장*/
+#soysauce_bottle{
+    position: relative;
+    top: -7rem;
+    width: 40rem;
+    max-width: 700px;
+    z-index: -5;
+}
+
+#soysauce {
+    position: absolute;
+    width: 45rem;
+    max-width: 900px;
+    right: 0;
+    z-index: 5;
+    top: -25vw;
+}
+@media(max-width:1450px){
+    #soysauce{
+        top: -35vw;;
+    }
+    
+}
+@media(max-width:1000px){
+    #soysauce_bottle, #soysauce{
+        display: none;
+    }
+    .section_6{
+        margin-top: 0;
+    }
+}
+
+/*section_6 setting*/
+.section_6 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-top: -10rem;
+    margin-bottom: 20px;
+}
+    /*헤드*/
+.section_6 .head {
+    font-size: 3.3rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 3.0rem;
+}
+
+    /*그리드 세팅*/
+.section_6 .container{
+    height: 30rem; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 200px 200px 200px 100px;
+    grid-column-gap: 2rem;
+    position: relative;
+}
+    /*그리드 항목*/
+.section_6 .container .photo_1{
+    grid-column: 1/3;
+    grid-row: 1/4;
+    background-image: url(img/about.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+
+.section_6 .container p {
+    font-size: 1.2rem;
+    grid-column: 3/5;
+    grid-row: 1/2;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.section_6 .container .photo_2 {
+    margin-left: 5vw;
+    grid-column: 2/5;
+    grid-row: 2/5;
+    position: relative;
+    background-image: url(img/salmon_sushi.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-bottom: 
+}
+@media(max-width:765px){
+    .section_6 .head {
+        margin-bottom: 20px;
+    }
+    .section_6 .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .section_6 .container .photo_1{
+        width: 100%;
+        height: 60rem;
+        margin-bottom: 30px;
+    }
+    .section_6 .container p{
+        text-align: center;
+        font-weight: 400;
+    }
+}
+
+    /*미디어 쿼리*/
+@media(max-width:1000px){
+    .section_6{
+        margin-top: 5rem;
+    }
+}
+
+/*Section_7 Setting*/
+.section_7_container{
+    position: relative;
+    margin-top: -400px;
+    margin-bottom: -200px;
+    overflow-x: hidden;
+}
+.section_7 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    max-width: 1120px;
+    margin: 0 auto;
+    margin-top: 25rem;
+}
+
+    /*플렉스 세팅*/
+.section_7 .container{
+    display: flex;
+    align-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+    /*플렉스 컨텐츠*/
+.section_7 .container .contents {
+    margin: 30px 30px;
+    width: 300px;
+    height: 300px;
+}
+    /*패턴*/
+.section_7 .pattern_1 {
+    position: relative;
+    z-index: -2;
+    width: 600px;
+    height: auto;
+    top: 350px;
+    left: -25vw;
+}
+.section_7 .pattern_2 {
+    position: relative;
+    z-index: -2;
+    top: -350px;
+    width: 600px;
+    right: -25vw;
+}
+
+    /*미디어쿼리*/
+@media(max-width:799px){
+    .section_7_container{
+        margin-top: -650px;
+    }
+}
+
+/*Footer setting*/
+footer{
+    background-color: rgba(0,0,0,0.02);
+    padding: 20px;
+    padding-top: 40px;
+}
+footer .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90vw;
+    max-width: 1120px;
+    margin: 0 auto
+}
+
+    /*로고*/
+footer .logo_container{
+    width: 200px;
+    margin-bottom: 40px;
+}
+footer .hello, footer .job{
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+footer .hello li, footer .job li{
+    margin-bottom:20px;
+}
+footer .hello .title, footer .job .title{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+@media(min-width:750px){
+    footer .container{
+        flex-direction: row;
+    }
+    footer .container .logo_container {
+        flex: 0 0 33%;
+    }
+    footer .logo{
+        width: 200px;
+    }
+    footer .hello, footer .job{
+        flex: 0 0 33%;
+        padding-right: 80px;
+    }
+}
