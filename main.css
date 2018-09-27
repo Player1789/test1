@@ -51,6 +51,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.4s;
 }
 
 .header ul li:hover{
@@ -75,7 +76,6 @@ header {
     color: rgb(20, 128, 196);
     align-items: center;
     display: flex;
-    align-items: ;
     justify-content: flex-end;
 }
 .header .p{
@@ -87,6 +87,7 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
+    transition: all 0.4s;
 }
 
 .header .p div:hover{
@@ -157,7 +158,7 @@ header .hamburger span{
 .section_1 .container_1 .photo {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url(./img/background_1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)), url(./img/background_2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -195,89 +196,105 @@ header .hamburger span{
     margin-top: 10rem;
     margin-bottom: 10rem;
 }
+.section_2_container{
+    background-image: linear-gradient(rgba(0,0,0,0.03),rgba(0,0,0,0));
+}
 /*스시 헤드*/
 .section_2 .head {
     font-size: 3.3rem;
     font-weight: 800;
     display: block;
-    margin-bottom: 2.0rem;
+    margin-bottom: 5rem;
 }
 
-/*스시 네비게이션*/
-.section_2 .nav{
-    background-color: rgba(255,255,255,0.7);
-    padding-bottom: 1rem;
-    margin-bottom: 3.125rem;
-}
-
-.section_2 .nav ul{
-    list-style: none;
-    display: flex;
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-.section_2 .nav .select {
-    border-top: 4px rgb(255,102,51) solid;
-    font-weight: 700;
-    color: rgb(255,102,51);
-}
-
-.section_2 .nav li{
-    padding-top: 1rem;
-    text-transform: uppercase;
-    margin: 0 2.9rem;
-    color: rgba(0,0,0,0.5)
-}
 /*스시 그리드 세팅*/
 .section_2 .container{
     position: relative;
-    height: 30rem; 
-    display: grid;
-    grid-template-columns: 1.5fr 2.5fr;
-    grid-template-rows: 15rem 15rem;
-    grid-column-gap: 6rem;
-}
-/*스시 정보*/
-.section_2 .container .info {
-    grid-column: 1/2;
-    grid-row: 1/2;
-} 
-
-.section_2 .container .info .name {
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-top: -1.5rem;
-    margin-bottom: 1.2rem;
-    color: rgb(255,102,51);
+    width: 100%;
+    height: 40rem; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.section_2 .container .info .description {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    font-weight: 500;
-}
-
-.section_2 .container .sushi img{
-    height: 16rem;
-    width: auto;
-    position: absolute;
-    left: -1rem;
-    bottom: 0;
-}
-
-/*스시 배경사진*/
-.section_2 .container .photo {
-    background-image: url(img/inari_background.jpg);
-    background-repeat: no-repeat;
+/*스시 사진 세팅*/
+.section_2 .container .uramaki{
+    flex: 0 0 40%;
+    height: 50%;
+    background-image: url(img/uramaki.jpg);
+    background-position: center;
     background-size: cover;
-    background-position: left;
-    position: relative;
-    grid-column: 2/3;
-    grid-row: 1/3;
-    height: inherit;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    transition: all 0.4s;
 }
 
+.section_2 .container .nigiri{
+    flex: 0 0 55%;
+    height: 50%;
+    background-image: url(img/nigiri.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 60px;
+    transition: all 0.4s;
+}
+
+.section_2 .container .inari{
+    flex: 0 0 55%;
+    height: 50%;
+    background-image: url(img/inari2.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-right: 30px;
+    transition: all 0.4s;
+}
+
+.section_2 .container .maki{
+    flex: 0 0 40%;
+    height: 50%;
+    background-image: url(img/maki.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all 0.4s;
+}
+
+/*스시 사진 마우스 올리기*/
+.section_2 .container .uramaki:hover{
+    background-image: linear-gradient(to right,rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/uramaki.jpg);
+    transform: scale(1.05);
+}
+.section_2 .container .nigiri:hover{
+    background-image: linear-gradient(to right,rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/nigiri.jpg);
+    transform: scale(1.05);
+}
+.section_2 .container .inari:hover{
+    background-image: linear-gradient(to right,rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/inari2.jpg);
+    transform: scale(1.05);
+}
+.section_2 .container .maki:hover{
+    background-image: linear-gradient(to right,rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/maki.jpg);
+    transform: scale(1.05);
+}
+
+/*이름 세팅*/
+.section_2 .container .photo .item {
+    position: relative;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    top: -32px;
+}
+
+/*설명 세팅*/
+.section_2 .container .photo .info {
+    position: relative;
+    padding: 0 20px;
+    width:60%;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+    display: none;
+}
 /*장식사진*/
 .section_2_container {
     position: relative;
@@ -293,73 +310,55 @@ header .hamburger span{
     margin-top: -200px;
 }
 /*Section_2 미디어쿼리*/
+@media (max-width:670px){
+    .section_2 {
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .section_2 .head {
+        font-weight: 800;
+        font-size: 2.5rem;
+    }
+    .section_2 .container{
+        height: auto;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .section_2 .container .photo{
+        flex: 0 0 100%;
+        height: 250px;
+        margin-bottom: 60px;
+    }
+    
+    .section_2 .container .photo p{
+        text-align: center;
+    }
+    .section_2 .container .photo .info{
+        width: 100%;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+    .section_2 .container .uramaki:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/uramaki.jpg);
+        transform: scale(1.05);
+    }
+    .section_2 .container .nigiri:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/nigiri.jpg);
+        transform: scale(1.05);
+    }
+    .section_2 .container .inari:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/inari2.jpg);
+        transform: scale(1.05);
+    }
+    .section_2 .container .maki:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/maki.jpg);
+        transform: scale(1.05);
+    }
+    }
 
-@media (max-width: 1000px){
-.section_2 {
-    width: 85vw;
-}
-.section_2 .container {
-    grid-column-gap: 3rem;
-}
-.section_2 .container .sushi img{
-    height: 12rem;
-}
-}
-
-@media (max-width:765px){
-.section_2 {
-    height: 700px;
-    padding: 0 20px;
-    margin-top: 20px;
-}
-.section_2 .head{
-    font-size: 4rem;
-    margin: 1.5rem 0;
-}
-.section_2 .container{
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr
-}
-.section_2 .container .photo {
-    display: none;
-}
-.section_2 .photo_wrapper {
-    overflow: hidden;
-}
-.section_2 .container .info {
-    grid-row: 2/3;
-    grid-column: 1/2;
-    text-align: center;
-}
-.section_2 .container .info .description{
-    font-size: 1rem;
-}
-.section_2 .container .info .name {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-}
-.section_2 .container .sushi{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-row: 1/2;
-    grid-column: 1/2;
-}
-.section_2 .container .sushi img {
-    position: relative;
-    height: 15rem
-}
-.section_2 .nav {
-    display: none;
-}
-#salmon{
-    width: 25rem;
-    left: 15vw;
-}
-}
 
 /*Section_3 Setting*/
 .section_3 {
@@ -371,97 +370,158 @@ header .hamburger span{
     width: 90vw;
     max-width: 1120px;
     margin: 0 auto;
-    margin-top: 15rem;
+    margin-top: 10rem;
     margin-bottom: 10rem;
 }
-/*핫밀 헤드*/
+.section_3_container{
+    background-image: linear-gradient(rgba(0,0,0,0.03),rgba(0,0,0,0));
+}
+/*스시 헤드*/
 .section_3 .head {
     font-size: 3.3rem;
     font-weight: 800;
     display: block;
-    margin-bottom: 2.0rem;
+    margin-bottom: 5rem;
 }
 
-/*핫밀 네비게이션*/
-.section_3 .nav{
-    background-color: rgba(255,255,255,0.7);
-    padding-bottom: 1rem;
-    margin-bottom: 3.125rem;
-}
-
-.section_3 .nav ul{
-    list-style: none;
-    display: flex;
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-.section_3 .nav .select {
-    border-top: 4px rgb(207,67,21) solid;
-    font-weight: 700;
-    color: rgb(207,67,21);
-}
-
-.section_3 .nav li{
-    padding-top: 1rem;
-    text-transform: uppercase;
-    margin: 0 2.9rem;
-    color: rgba(0,0,0,0.5)
-}
-
-/*핫밀 그리드 세팅*/
+/*스시 그리드 세팅*/
 .section_3 .container{
     position: relative;
-    height: 30rem; 
-    display: grid;
-    grid-template-columns: 2.5fr 1.5fr;
-    grid-template-rows: 15rem 15rem;
-    grid-column-gap: 6rem;
-}
-/*핫밀 정보*/
-.section_3 .container .info {
-    grid-column: 2/3;
-    grid-row: 1/2;
-} 
-
-.section_3 .container .info .name {
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-top: -1.5rem;
-    margin-bottom: 1.2rem;
-    color: rgb(207,67,21);
+    width: 100%;
+    height: 40rem; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.section_3 .container .info .description {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    font-weight: 500;
-}
-.section_3 .container .sushi{
-    position: relative;
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-.section_3 .container .sushi img{
-    height: 16rem;
-    width: auto;
-    position: absolute;
-    left: -1rem;
-    bottom: 0;
-}
-
-/*핫밀 배경사진*/
-.section_3 .container .photo {
-    background-image: url(img/noodles_background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+/*스시 사진 세팅*/
+.section_3 .container .bento{
+    flex: 0 0 40%;
+    height: 50%;
+    background-image: url(img/bento.jpg);
     background-position: center;
-    position: relative;
-    grid-column: 1/2;
-    grid-row: 1/3;
-    height: inherit;
+    background-size: cover;
+    margin-right: 30px;
+    margin-bottom: 60px;
+    transition: all 0.4s;
 }
 
+.section_3 .container .donburi{
+    flex: 0 0 55%;
+    height: 50%;
+    background-image: url(img/donuri.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 60px;
+    transition: all 0.4s;
+}
+
+.section_3 .container .curry{
+    flex: 0 0 55%;
+    height: 50%;
+    background-image: url(img/curry.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-right: 30px;
+    transition: all 0.4s;
+}
+
+.section_3 .container .noodles{
+    flex: 0 0 40%;
+    height: 50%;
+    background-image: url(img/noodles.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all 0.4s;
+}
+
+/*스시 사진 마우스 올리기*/
+.section_3 .container .bento:hover{
+    background-image: linear-gradient(to right,rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/bento.jpg);
+    transform: scale(1.05);
+}
+.section_3 .container .donburi:hover{
+    background-image: linear-gradient(to right,rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/donuri.jpg);
+    transform: scale(1.05);
+}
+.section_3 .container .curry:hover{
+    background-image: linear-gradient(to right,rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/curry.jpg);
+    transform: scale(1.05);
+}
+.section_3 .container .noodles:hover{
+    background-image: linear-gradient(to right,rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/noodles.jpg);
+    transform: scale(1.05);
+}
+
+/*이름 세팅*/
+.section_3 .container .photo .item {
+    position: relative;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    top: -32px;
+}
+
+/*설명 세팅*/
+.section_3 .container .photo .info {
+    position: relative;
+    padding: 0 20px;
+    width:60%;
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 600;
+    display: none;
+}
+
+/*Section_3 미디어쿼리*/
+@media (max-width:670px){
+    .section_3 {
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    .section_3 .head {
+        font-weight: 800;
+        font-size: 2.5rem;
+    }
+    .section_3 .container{
+        height: auto;
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .section_3 .container .photo{
+        flex: 0 0 100%;
+        height: 250px;
+        margin-bottom: 60px;
+    }
+    
+    .section_3 .container .photo p{
+        text-align: center;
+    }
+    .section_3 .container .photo .info{
+        width: 100%;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+    .section_3 .container .bento:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/bento.jpg);
+        transform: scale(1.05);
+    }
+    .section_3 .container .donburi:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/donuri.jpg);
+        transform: scale(1.05);
+    }
+    .section_3 .container .curry:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/curry.jpg);
+        transform: scale(1.05);
+    }
+    .section_3 .container .noodles:hover{
+        background-image: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0)), url(img/noodles.jpg);
+        transform: scale(1.05);
+    }
+    }
 /*장식사진*/
 .section_3_container {
     position: relative;
@@ -476,69 +536,6 @@ header .hamburger span{
 /*Section_3 미디어쿼리*/
 
 @media (max-width: 1000px){
-
-.section_3 {
-    width: 85vw;
-}
-.section_3 .container .sushi img{
-    height: 12rem;
-}
-.section_3 .container {
-    grid-column-gap: 3rem;
-}
-}
-
-@media (max-width:765px){
-.section_3 {
-    height: 700px;
-    padding: 0 20px;
-    margin-top: 20px;
-}
-.section_3 .head{
-    font-size: 4rem;
-    margin: 1.5rem 0;
-}
-.section_3 .container{
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr
-}
-.section_3 .container .photo {
-    display: none;
-}
-.section_3 .photo_wrapper {
-    overflow: hidden;
-}
-.section_3 .container .info {
-    padding: 0 20px;
-    grid-row: 2/3;
-    grid-column: 1/2;
-    text-align: center;
-}
-.section_3 .container .info .name {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-}
-.section_3 .container .info .description{
-    font-size: 1rem;
-}
-.section_3 .container .sushi{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    grid-row: 1/2;
-    grid-column: 1/2;
-}
-.section_3 .container .sushi img {
-    position: relative;
-    height: 15rem;
-    left: 0.3rem;
-}
-.section_3 .nav {
-    display: none;
-}
 #rice{
     height: 700px;
     left: 0;
@@ -600,11 +597,12 @@ header .hamburger span{
     background-color:rgb(237,31,35);
     border-radius: 8px;
     box-shadow: 3px 3px 0px rgb(20,128,196);
+    border: 0px red solid;
 }
     /*미디어 쿼리*/
 @media(max-width:1170px){
     .section_4{
-        background-image: linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.3)), url(img/AYCE_background.jpg);
+        background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)), url(img/AYCE_background.jpg);
     }
     .section_4 .info {
         width: 90vw;
@@ -696,13 +694,14 @@ header .hamburger span{
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
 }
 
     /*그리드 항목*/
 .section_5 .container .info {
-    width: 355px;
+    width: 350px;
     margin: 2.2rem;
     display: grid;
     grid-template-rows: 3rem 1rem 5rem 4rem 3rem;
@@ -712,7 +711,7 @@ header .hamburger span{
 
 .section_5 .container .name {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-top: -1rem;
 }
@@ -761,20 +760,50 @@ header .hamburger span{
     background-color: black;
     padding: 3px 20px;
 }
-
-@media(max-width:765px){
+@media(max-width:936px){
+    .section_5 {
+        margin-top: 30px;
+    }
+    .section_5 .container {
+        justify-content: center;
+    }
     .section_5 .nav ul{
         display: flex;
         flex-direction: column;
     }
-    .section_5 .nav ul li{
+        .section_5 .nav ul li{
         margin: 1rem;
         text-align: center;
     }
-    .section_5 .info:first-child{
+        .section_5 .info:first-child{
         margin-top: -1rem;
     }
+    .section_5 .container .trading_hours {
+        font-weight: 500;
+        display: flex;
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+    .section_5 .container .trading_hours .days{
+        flex: 0 0 40%;
+    }
+    .section_5 .container .trading_hours .hours{
+        flex: 0 0 60%;
+    }
+    .section_5 .container .menu {
+        width: 100%;
+    }
+    .section_5 .container .phone_menu {
+        display: grid;
+        grid-gap: 15px;
+    }
+    .section_5 .container .info {
+        grid-template-rows: 3rem 1rem 5rem 4rem;
+    }
+    
 }
+
 
 /*간장병과 간장*/
 #soysauce_bottle{
@@ -864,8 +893,8 @@ header .hamburger span{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin-bottom: 
 }
+
 @media(max-width:765px){
     .section_6 .head {
         margin-bottom: 20px;
@@ -942,9 +971,12 @@ header .hamburger span{
 }
 
     /*미디어쿼리*/
-@media(max-width:799px){
+@media(max-width:750px){
+    .section_7{
+        margin-top: 150px;
+    }
     .section_7_container{
-        margin-top: -650px;
+        margin-top: -450px;
     }
 }
 
@@ -966,12 +998,12 @@ footer .container {
 
     /*로고*/
 footer .logo_container{
-    width: 200px;
+    width: 150px;
     margin-bottom: 40px;
 }
 footer .hello, footer .job{
     list-style: none;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 30px;
 }
@@ -979,11 +1011,11 @@ footer .hello li, footer .job li{
     margin-bottom:20px;
 }
 footer .hello .title, footer .job .title{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
 }
 
-@media(min-width:750px){
+@media(min-width:780px){
     footer .container{
         flex-direction: row;
     }
@@ -991,7 +1023,7 @@ footer .hello .title, footer .job .title{
         flex: 0 0 33%;
     }
     footer .logo{
-        width: 200px;
+        width: 180px;
     }
     footer .hello, footer .job{
         flex: 0 0 33%;
