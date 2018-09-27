@@ -2,7 +2,7 @@
     padding: 0; margin: 0; box-sizing: border-box;
 }
 html{
-    font-family: Segoe UI,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-family: Segoe UI, -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
 /*Header setting*/
@@ -16,6 +16,7 @@ header {
     background: rgba(255,255,255,0.9);
     position: fixed;
     z-index: 1;
+    transition: all 0.2s;
 }
 
 .header {
@@ -43,15 +44,17 @@ header {
     list-style: none;
     justify-content: flex-start;
     font-weight: 600;
+    transition: all 0.2s;
 }
 
 .header ul li{
+    cursor: pointer;
     height: 100%;
     padding: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.4s;
+    transition: all 0.2s;
 }
 
 .header ul li:hover{
@@ -79,6 +82,7 @@ header {
     justify-content: flex-end;
 }
 .header .p{
+    cursor: pointer;
     position: relative;
     right: 1em;
 }
@@ -97,6 +101,7 @@ header {
 
 /*Hamburger Setting*/
 header .hamburger {
+    cursor: pointer;
     display: none;
     position: absolute;
     left: 1em;
@@ -111,6 +116,7 @@ header .hamburger span{
 
 /*Dot Menu Setting*/
 #dot {
+    cursor: pointer;
     position: absolute;
     padding: 1em;
     right: 1em;
@@ -132,6 +138,7 @@ header .hamburger span{
     }
     .header_content li {
         text-align: center;
+        width: 100%;
     }
     header .hamburger{
         display: block;
@@ -306,7 +313,7 @@ header .hamburger span{
     z-index: -2;
     opacity: 0.4;
     width: 30rem;
-    right: -15rem;
+    right: -25rem;
     margin-top: -200px;
 }
 /*Section_2 미디어쿼리*/
@@ -585,6 +592,7 @@ header .hamburger span{
 }
 
 .section_4 .info button{
+    cursor: pointer;
     grid-column: 2/3;
     width: 40%;
     margin: 0 auto;
@@ -683,6 +691,7 @@ header .hamburger span{
 }
 
 .section_5 .nav li{
+    cursor: pointer;
     padding-top: 1rem;
     text-transform: uppercase;
     margin: 0 2.9rem;
