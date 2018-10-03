@@ -6,9 +6,11 @@
     <title>HIKARI Sushi Bar & Japanese Cuisine</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+<div id="wrapper">
 <header>
     <div class="header">
         <div class="logo">
@@ -34,10 +36,8 @@
     </div>
 </header>
 
-<p id="fixed">Choose your taste with us</p>
-
 <section class="section_1" id="hero">
-    <div class="text">
+    <div class="text" data-aos="fade-up" data-aos-duration="3000">
         <p class="title">Choose<br>your taste<br>with us</p>
         <nav>
             <li><a href="#branches">branches</a></li>
@@ -53,10 +53,10 @@
 
 <section class="section_2">
      <div class="background"></div>
-     <div class="photo"></div>
+     <div class="photo" data-aos="fade-down" data-aos-duration="2000"></div>
      <div class="text">
-         <p class="title">Welcome to<br>hikari sushi</p>
-         <p class="info">Hikari Sushi Bar, contemporary Japanese cuisine, have presented ourselves with high quality Ingredients, top skilled chefs and an excellent customer service from the start to serve the best Sushi in New Zealand.</p>
+         <p class="title" data-aos="fade-right" data-aos-duration="1000">Welcome to<br>hikari sushi</p>
+         <p class="info" data-aos="fade-left" data-aos-duration="2000">Hikari Sushi Bar, contemporary Japanese cuisine, have presented ourselves with high quality Ingredients, top skilled chefs and an excellent customer service from the start to serve the best Sushi in New Zealand.</p>
      </div>
 </section>
 
@@ -66,8 +66,8 @@
 
 <div class="section_3_container">
 <section class="section_3" id="food">
-    <div class="head">Sushi & Meal</div>
-    <div class="container">
+    <div class="head" data-aos="fade-right" data-aos-duration="1000">Sushi & Meal</div>
+    <div class="container" data-aos="fade-left" data-aos-duration="2000">
         <div class="contents"><p class="info"><span class="title">Nigiri</span>A small oval block of cold rice topped with wasabi and a thin slice of fish, prawn, etc</p></div>
         <div class="contents"><p class="info"><span class="title">Maki</span>A small segment cut from a long roll of cold rice and various other ingredients wrapped in a sheet of seaweed</p></div>
         <div class="contents"><p class="info"><span class="title">Uramaki</span>A Japanese food in the form of a roll made with rice on the outside and filling on the inside</p></div>
@@ -82,7 +82,7 @@
 
 
 
-<section class="section_4">
+<section class="section_4" data-aos="fade-right" data-aos-duration="1500">
     <div class="info">
         <img src="img/AYCE_logo.svg" alt="" class="logo">
         <p>We are proud of offering the first & best Japanese Tapas dining experience in Christchurch!
@@ -94,59 +94,111 @@
 
 
 <section class="section_5" id="branches">
-    <div class="head"><p>Branches</p></div>
-    <div class="nav">
+    <div class="head" data-aos="fade-right" data-aos-duration="1000"><p>Branches</p></div>
+    <div class="nav" data-aos="fade-right" data-aos-duration="1000">
         <ul>
-        <li class="select">Queenstown</li>
-        <li>Dunedin</li>
-        <li>Christchurch</li>
+        <li class="select" data-location="queenstown">Queenstown</li>
+        <li data-location="dunedin">Dunedin</li>
+        <li data-location="christchurch">Christchurch</li>
         </ul>
     </div>
-    <div class="container">
-        <div class="info">
-            <div class="name">beach</div>
-            <div class="line"></div>
-            <div class="address">5 Beach Street, Queenstown, 9300</div>
-            <div class="trading_hours">
-                <div class="days">Mon - Sun</div>
-                <div class="hours">
-                    11:30 am - 02:30 pm<br>
-                    05:00 am - 09:30 pm
+    <div class="container" data-aos="fade-left" data-aos-duration="2000">
+        <div class="select" data-location="queenstown">
+            <div class="info">
+                <div class="name">beach</div>
+                <div class="line"></div>
+                <div class="address">5 Beach Street, Queenstown, 9300</div>
+                <div class="trading_hours">
+                    <div class="days">Mon - Sun</div>
+                    <div class="hours">
+                        11:30 am - 02:30 pm<br>
+                        05:00 am - 09:30 pm
+                    </div>
+                </div>
+                <div class="phone_menu">
+                <div class="phone">03 442 9030</div>
+                <a href="img/bento.jpg" download="Beach Menu" class="menu">MENU</a>
                 </div>
             </div>
-            <div class="phone_menu">
-            <div class="phone">03 442 9030</div>
-            <div class="menu">MENU</div>
+            <div class="info">
+                <div class="name">The Mall</div>
+                <div class="line"></div>
+                <div class="address">6/22 Ballarant Street, Queenstown 9348</div>
+                <div class="trading_hours">
+                    <div class="days">Mon - Sun</div>
+                    <div class="hours">
+                        10:00 am - 6:00 pm
+                    </div>
+                </div>
+                <div class="phone_menu">
+                <div class="phone">03 442 7767</div>
+                <a href="img/bento.jpg" download="The Mall Menu"class="menu">MENU</a>
+                </div>
+            </div>
+            <div class="info">
+                <div class="name">5 Mile</div>
+                <div class="line"></div>
+                <div class="address">32 Grant Road, Frankton, Queenstown 9300</div>
+                <div class="trading_hours">
+                    <div class="days">Mon - Wed<br>Thu - Sat<br>Sun<br></div>
+                    <div class="hours">
+                        9:00 am - 6:00 pm<br>9:00 am - 8:00 pm<br>9:00 am - 6:00 pm<br>
+                    </div>
+                </div>
+                <div class="phone_menu">
+                <div class="phone">03 441 4139</div>
+                <a href="img/bento.jpg" download="5 Mile Menu" class="menu">MENU</a>
+                </div>
             </div>
         </div>
-        <div class="info">
-            <div class="name">The Mall</div>
-            <div class="line"></div>
-            <div class="address">6/22 Ballarant Street, Queenstown 9348</div>
-            <div class="trading_hours">
-                <div class="days">Mon - Sun</div>
-                <div class="hours">
-                    10:00 am - 6:00 pm
+        <div class="no_select" data-location="dunedin">
+            <div class="info">
+                <div class="name">George</div>
+                <div class="line"></div>
+                <div class="address">363 George Street, Dunedin 9016</div>
+                <div class="trading_hours">
+                    <div class="days">Mon - Sun</div>
+                    <div class="hours">
+                        9:00 am - 9:00 pm
+                    </div>
+                </div>
+                <div class="phone_menu">
+                    <div class="phone">03 477 9030</div>
+                    <a href="img/bento.jpg" download="George Menu" class="menu">MENU</a>
                 </div>
             </div>
-            <div class="phone_menu">
-            <div class="phone">03 442 7767</div>
-            <div class="menu">MENU</div>
+
+            <div class="info">
+                <div class="name">Meridian</div>
+                <div class="line"></div>
+                <div class="address">267 George Street, Meridian Mall, Dunedin 9016</div>
+                <div class="trading_hours">
+                    <div class="days">Mon - Thu<br>Fri<br>Sat - Sun<br></div>
+                    <div class="hours">
+                        9:00 am - 6:00 pm<br>9:00 am - 8:00 pm<br>9:00 am - 5:00 pm<br>
+                    </div>
+                </div>
+                <div class="phone_menu">
+                    <div class="phone">03 477 2481</div>
+                    <a href="img/bento.jpg" download="Meridian Menu" class="menu">MENU</a>
+                </div>
             </div>
         </div>
-        <div class="info">
-            <div class="name">5 Mile</div>
-            <div class="line"></div>
-            <div class="address">32 Grant Road, Frankton, Queenstown 9300</div>
-            <div class="trading_hours">
-                <div class="days">Mon - Wed<br>Thu - Sat<br>Sun<br></div>
-                <div class="hours">
-                    9:00 am - 6:00 pm<br>9:00 am - 8:00 pm<br>9:00 am - 6:00 pm<br>
+        <div class="no_select" data-location="christchurch">
+            <div class="info">
+                <div class="name">Awly Building</div>
+                <div class="line"></div>
+                <div class="address">287 Durham Street North, Christchurch Central, Christchurch 8013</div>
+                <div class="trading_hours">
+                    <div class="days">Mon - Sat</div>
+                    <div class="hours">
+                        9:00 am - 9:00 pm
+                    </div>
                 </div>
-            </div>
-            <div class="phone_menu">
-            <div class="phone">03 441 4139</div>
-            <div class="menu">MENU</div>
+                <div class="phone_menu">
+                    <div class="phone">03 421 3543</div>
+                    <a href="img/bento.jpg" download="Awly Menu" class="menu">MENU</a>
+                </div>
             </div>
         </div>
     </div>
@@ -155,12 +207,12 @@
 <div style="position: relative"><img src="img/soysauce.png" id="soysauce"></div>
 
 <div class="section_7_container">
-<section class="section_7" id="gallery">
-    <div class="sns">
+<section class="section_7" id="gallery" >
+    <div class="sns" data-aos="fade-up" data-aos-duration="1500">
         <a href="https://www.facebook.com/nzhikari/" class="facebook"><img src="img/facebook.svg" alt="">@nzhikari</a>
         <a href="https://www.instagram.com/nzhikari/" class="insta"><img src="img/insta.svg" alt="">@nzhikari</a>
     </div>
-    <div class="container">
+    <div class="container" data-aos="fade-up" data-aos-duration="1500">
         <img src="img/1.jpg" alt="" class="contents">
         <img src="img/2.jpg" alt="" class="contents">
         <img src="img/3.jpg" alt="" class="contents">
@@ -168,8 +220,8 @@
         <img src="img/5.jpg" alt="" class="contents">
         <img src="img/6.jpg" alt="" class="contents">
     </div>
-</section>
 <img src="img/pattern_2.jpg" class="pattern_2">
+</section>
 </div>
 
 
@@ -189,5 +241,10 @@
     </div>
 </footer>
 <script src="main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
+</div>
 </body>
 </html>
