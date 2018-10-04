@@ -592,6 +592,7 @@ header.up{
     background-image: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1)), url(img/AYCE_background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     overflow: hidden;
     display: flex;
 }
@@ -938,6 +939,7 @@ header.up{
     max-width: 1120px;
     margin: 0 auto;
     margin-top: -10rem;
+    margin-bottom: 150px;
 }
 
     /*플렉스 세팅*/
