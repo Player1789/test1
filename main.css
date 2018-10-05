@@ -330,7 +330,7 @@ header.up{
     margin: 40px 0;
     background-image: url(img/hero_background.jpg);
     background-size: cover;
-    background-position: bottom;
+    background-position:left center;
 }
 
 .section_2 .text {
@@ -441,7 +441,7 @@ header.up{
     width: 270px;
     height: 270px;
     margin: 10px;
-    transition: all 0.4s;
+    transition: all 0.6s;
 }
 .section_3 .container .info .title{
     font-size: 2rem;
@@ -451,10 +451,14 @@ header.up{
     border-bottom: 2px white solid;
 }
 .section_3 .container p{
-    display: none;
     color: white;
     padding: 20px;
     font-size: 1rem;
+    opacity: 0;
+}
+
+.section_3 .container .contents:hover p{
+    opacity: 1;
 }
 @media(max-width:1450px){
     .section_3 .container .contents{

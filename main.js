@@ -11,14 +11,6 @@ window.addEventListener('scroll',function(){
     }
 });
 
-// 음식 마우스 이벤트
-let sushiPhotos = document.querySelectorAll(".section_3 .container .contents");
-sushiPhotos.forEach(content=>content.addEventListener('mouseover',showInfo));
-sushiPhotos.forEach(photo => photo.addEventListener('mouseleave', hideInfo));
-sushiPhotos.forEach(content => content.addEventListener('touchenter', showInfo));
-sushiPhotos.forEach(photo => photo.addEventListener('touchleave', hideInfo));
-function showInfo (){this.querySelector('.info').style.display="block"} ;
-function hideInfo() { this.querySelector('.info').style.display = "none" };
 
 //햄버거 메뉴 이벤트
 const hamburger = document.querySelector('.header .hamburger');
