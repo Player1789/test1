@@ -629,7 +629,7 @@ header.up{
 @media(max-width:1170px){
     .section_4{
         background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)), url(img/AYCE_background.jpg);
-        background background-attachment: initial;
+        background background-attachment: scroll;
     }
     .section_4 .info {
         width: 90vw;
