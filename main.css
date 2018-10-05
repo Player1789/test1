@@ -578,8 +578,7 @@ header.up{
     height: 450px;
     background-image: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1)), url(img/AYCE_background.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
+    background-attachment: fixed;
     overflow: hidden;
     display: flex;
 }
