@@ -310,8 +310,7 @@ header.up{
     width: 100vw;
     max-width: 100%;
     max-height: 1150px;
-    height: 50vw;
-    min-height: 800px;
+    height: 800px;
     display: grid;
     padding: 7vw 0;
     grid-template-columns: repeat(16,1fr);
@@ -581,7 +580,6 @@ header.up{
     background-attachment: fixed;
     overflow: hidden;
     display: flex;
-    z-index: -3;
 }
     /*중앙 세팅*/
 .section_4 .info {
@@ -631,6 +629,7 @@ header.up{
 @media(max-width:1170px){
     .section_4{
         background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)), url(img/AYCE_background.jpg);
+        background background-attachment: initial;
     }
     .section_4 .info {
         width: 90vw;
