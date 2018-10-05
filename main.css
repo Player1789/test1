@@ -581,6 +581,7 @@ header.up{
     background-attachment: fixed;
     overflow: hidden;
     display: flex;
+    z-index: -3;
 }
     /*중앙 세팅*/
 .section_4 .info {
