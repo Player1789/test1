@@ -444,7 +444,7 @@ header.up{
     transition: all 0.4s;
 }
 .section_3 .container .info .title{
-    font-size: 2rem;
+    font-size: 1.5rem;
     display: block;
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -453,7 +453,7 @@ header.up{
 .section_3 .container p{
     color: white;
     padding: 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     opacity: 0;
 }
 
@@ -472,7 +472,7 @@ header.up{
         height: 270px;
     }
     .section_3 .container p{
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 @media(max-width:760px){
