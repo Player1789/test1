@@ -207,25 +207,6 @@ header.up{
     }
 }
 
-/*fixed*/
-#fixed::before{
-    content: "□";
-    margin-right: 10px;
-}
-#fixed{
-    position: fixed;
-    transform: rotateZ(-90deg);
-    top:50vh;
-    color: red;
-    font-weight: 600;
-    font-size: 1rem;
-    z-index: 10;
-}
-@media(max-width:1300px){
-    #fixed{
-        display: none;
-    }
-}
 
 /*Section_1 Setting*/
 .section_1 {
@@ -242,7 +223,7 @@ header.up{
     grid-column: 7/17;
     grid-row: 1/2;
     height: 100%;
-    background-image: url(img/hero_background.jpg);
+    background-image: url(img/background_2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
@@ -328,14 +309,13 @@ header.up{
 .section_2 {
     width: 100vw;
     max-width: 100%;
-    max-height: 940px;
+    max-height: 1150px;
     height: 60vw;
     min-height: 800px;
     display: grid;
     padding: 7vw 0;
     grid-template-columns: repeat(16,1fr);
     grid-template-rows: 1fr;
-    overflow-x: hidden;
 }
 
 .section_2 .background{
@@ -348,9 +328,9 @@ header.up{
     grid-column:3/10;
     grid-row: 1/2;
     margin: 40px 0;
-    background-image: url(img/welcome_background.jpg);
+    background-image: url(img/hero_background.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: bottom;
 }
 
 .section_2 .text {
@@ -377,6 +357,9 @@ header.up{
 }
 
 @media(max-width:1200px){
+    .section_2{
+        height: 800px;
+    }
     .section_2 .photo {
         grid-column: 1/10;
     }
@@ -569,7 +552,7 @@ header.up{
     width: 800px;
     right: -4vw;
     z-index: -10;
-    top: 1500px;
+    top: 1200px;
 }
 @media(max-width:1200px){
     #pattern_1{
@@ -592,7 +575,7 @@ header.up{
     background-image: linear-gradient(rgba(255,255,255,0.1),rgba(255,255,255,0.1)), url(img/AYCE_background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     overflow: hidden;
     display: flex;
 }
@@ -898,7 +881,7 @@ header.up{
 /*간장병과 간장*/
 #soysauce_bottle{
     position: relative;
-    top: -7rem;
+    top: -900px;
     width: 40rem;
     max-width: 700px;
     z-index: -30;
@@ -910,14 +893,9 @@ header.up{
     max-width: 900px;
     right: 0;
     z-index: -10;
-    top: -25vw;
+    top: -2600px;
 }
-@media(max-width:1450px){
-    #soysauce{
-        top: -35vw;;
-    }
-    
-}
+
 @media(max-width:1000px){
     #soysauce_bottle, #soysauce{
         display: none;
@@ -930,7 +908,6 @@ header.up{
 /*Section_7 Setting*/
 .section_7 {
     position: relative;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -984,22 +961,16 @@ header.up{
     align-items: center;
     justify-content: flex-start;
 }
-    /*패턴*/
-.section_7_container .pattern_2 {
-    position: absolute;
-    z-index: -10;
-    top: 250px;
-    right: 0;
-    width: 650px;
-}
 
     /*미디어쿼리*/
 @media(max-width:750px){
     .section_7{
         margin-top: 50px;
         z-index: -20;
+        margin-bottom: 0px;
     }
 }
+
 @media(max-width:1300px){
     .section_7{
         margin-top: 5px;
@@ -1008,6 +979,7 @@ header.up{
 @media(max-width:1000px){
     .section_7{
         margin-top: 10px;
+        margin-bottom: 40px;
     }
     .section_7 .sns {
         margin-top: 80px;

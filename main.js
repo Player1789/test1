@@ -68,3 +68,16 @@ branchNavs.forEach(branchNav => branchNav.addEventListener('click',function(){
     branchContents.forEach(brnachContent => { brnachContent.classList = "no_select" });
     branchContents.forEach(brnachContent => { if (this.dataset.location === brnachContent.dataset.location) { brnachContent.classList="select"}});
 }));
+
+// Parallax Event
+const hikariSgin = document.querySelector('#pattern_1');
+const soysauce = document.querySelector('#soysauce');
+const sauceBottle = document.querySelector('#soysauce_bottle');
+window.addEventListener('scroll', function (){
+    let wScroll = window.pageYOffset;
+    console.log(wScroll);
+    hikariSgin.style.transform = `translateY(${wScroll/2.7}px)`;
+    if(window.innerWidth>1200){sauceBottle.style.transform = `translateY(${wScroll /4.5}px)`}
+    else { sauceBottle.style.transform = `translateY(${wScroll / 5.5}px)`};
+    soysauce.style.transform = `translateY(${wScroll /1.6}px)`;
+})
