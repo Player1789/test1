@@ -620,7 +620,7 @@ header.up{
     border: 0px red solid;
 }
     /*미디어 쿼리*/
-@media(max-width:1200px){
+@media(max-width:1400px){
     .section_4{
         background-image: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.2)), url(img/AYCE_background.jpg);
         background-attachment: initial;
@@ -968,8 +968,7 @@ header.up{
         margin-bottom: 0px;
     }
 }
-
-@media(max-width:1200px){
+@media(max-width:1400px){
     .section_7{
         margin-top: 100px;
     }
