@@ -557,7 +557,7 @@ header.up{
     z-index: -10;
     top: 1200px;
 }
-@media(max-width:1200px){
+@media(max-width:1400px){
     #pattern_1{
         display: none;
     }
@@ -892,13 +892,12 @@ header.up{
     z-index: -10;
     top: -2100px;
 }
-@media(max-width:1200px){
+@media(max-width:1400px){
     #soysauce_bottle, #soysauce{
         display: none;
     }
 }
 @media(max-width:1000px){
-
     .section_6{
         margin-top: 0;
     }
