@@ -456,7 +456,7 @@ header.up{
     opacity: 0;
 }
 
-.section_3 .container .contents:hover p, .section_3 .container .contents:focus p{
+.section_3 .container .contents:hover p, .section_3 .container .contents:active p{
     opacity: 1;
 }
 @media(max-width:1450px){
@@ -524,28 +524,28 @@ header.up{
     background-size: cover;
     background-position: center;
 }
-.section_3 .container .contents:nth-child(1):hover, .section_3 .container .contents:nth-child(1):focus {
+.section_3 .container .contents:nth-child(1):hover, .section_3 .container .contents:nth-child(1):active{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/nigiri.jpg);
 }
-.section_3 .container .contents:nth-child(2):hover, .section_3 .container .contents:nth-child(2):focus{
+.section_3 .container .contents:nth-child(2):hover, .section_3 .container .contents:nth-child(2):active{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/maki.jpg);
 }
-.section_3 .container .contents:nth-child(3):hover, .section_3 .container .contents:nth-child(3):focus{
+.section_3 .container .contents:nth-child(3):hover, .section_3 .container .contents:nth-child(3):active{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/uramaki.jpg);
 }
-.section_3 .container .contents:nth-child(4):hover, .section_3 .container .contents:nth-child(4):focus{
+.section_3 .container .contents:nth-child(4):hover, .section_3 .container .contents:nth-child(4):active{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/inari2.jpg);
 }
-.section_3 .container .contents:nth-child(5):hover, .section_3 .container .contents:nth-child(5):focus{
+.section_3 .container .contents:nth-child(5):hover, .section_3 .container .contents:nth-child(5):active{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/bento.jpg);
 }
-.section_3 .container .contents:nth-child(6):hover, .section_3 .container .contents:nth-child(6):focus{
+.section_3 .container .contents:nth-child(6):hover, .section_3 .container .contents:nth-child(6):active{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/donuri.jpg);
 }
-.section_3 .container .contents:nth-child(7):hover, .section_3 .container .contents:nth-child(7):focus{
+.section_3 .container .contents:nth-child(7):hover, .section_3 .container .contents:nth-child(7):active{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/curry.jpg);
 }
-.section_3 .container .contents:nth-child(8):hover, .section_3 .container .contents:nth-child(8):focus{
+.section_3 .container .contents:nth-child(8):hover, .section_3 .container .contents:nth-child(8):active{
     background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/noodles.jpg);
 }
 
