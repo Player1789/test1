@@ -495,38 +495,38 @@ header.up{
 
 .section_3 .sushi .inari.photo {
     grid-column: 7/12;
-    grid-row: 4/7;
+    grid-row: 5/8;
     background-image: url(img/inari2.jpg);
     background-size: cover;
     background-position: center;
 }
 .section_3 .sushi .inari.text {
     grid-column: 7/12;
-    grid-row: 7/9;
+    grid-row: 8/10;
 }
 
 .section_3 .sushi .maki.photo{
     grid-column: 1/4;
-    grid-row: 7/10;
+    grid-row: 8/11;
     background-image: url(img/maki.jpg);
     background-size: cover;
     background-position: center;
 }
 .section_3 .sushi .maki.text{
     grid-column: 1/4;
-    grid-row: 10/12;
+    grid-row: 11/13;
 }
 
 .section_3 .sushi .nigiri.photo {
     grid-column: 6/9;
-    grid-row: 10/13;
+    grid-row: 11/14;
     background-image: url(img/nigiri.jpg);
     background-size: cover;
     background-position: center;
 }
 .section_3 .sushi .nigiri.text {
     grid-column: 6/9;
-    grid-row: 13/16;
+    grid-row: 14/17;
 }
     /*meal contents*/
 .section_3 .meal .info {
