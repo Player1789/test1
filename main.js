@@ -61,14 +61,14 @@ branchNavs.forEach(branchNav => branchNav.addEventListener('click',function(){
     branchContents.forEach(brnachContent => { if (this.dataset.location === brnachContent.dataset.location) { brnachContent.classList="select"}});
 }));
 
-// Parallax Event
-const hikariSgin = document.querySelector('#pattern_1');
-const soysauce = document.querySelector('#soysauce');
-const sauceBottle = document.querySelector('#soysauce_bottle');
-window.addEventListener('scroll', function (){
-    if (window.innerWidth > 1400){
-        let wScroll = window.pageYOffset;
-        hikariSgin.style.transform = `translateY(${wScroll/2.7}px)`;
-        sauceBottle.style.transform = `translateY(${wScroll /4.5}px)`;
-        soysauce.style.transform = `translateY(${wScroll /1.6}px)`;}
-})
+//// Parallax Event
+//const hikariSgin = document.querySelector('#pattern_1');
+//const soysauce = document.querySelector('#soysauce');
+//const sauceBottle = document.querySelector('#soysauce_bottle');
+//window.addEventListener('scroll', function (){
+//    if (window.innerWidth > 1400){
+//        let wScroll = window.pageYOffset;
+//        hikariSgin.style.transform = `translateY(${wScroll/2.7}px)`;
+//        sauceBottle.style.transform = `translateY(${wScroll /4.5}px)`;
+//        soysauce.style.transform = `translateY(${wScroll /1.6}px)`;}
+//})

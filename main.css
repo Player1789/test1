@@ -241,7 +241,7 @@ header.up{
 
 .section_1 .text .title {
     margin-top: -7rem;
-    font-size: 7.5rem;
+    font-size: 5.8rem;
     font-weight: 700;
     line-height: 1.05;
     margin-bottom: 3.125rem;
@@ -416,139 +416,218 @@ header.up{
     justify-content: center;
     overflow-x: hidden;
     overflow-y: hidden;
-    margin-bottom: 100px;
+    margin-top: 100px;
 }
-    /*헤드*/
-.section_3 .head {
-    font-size: 3.3rem;
-    font-weight: 800;
-    display: block;
-    margin-bottom: 20px;
+    /*sushi*/
+@media(max-width:1919px){
+.section_3 .sushi,.section_3 .meal{
+    width: 90vw;
+    --content-width: 90vw;
+    --square-size: calc(var(--content-width)/12);
+    display:grid;
+    grid-template-columns: repeat(12,var(--square-size));
+    grid-template-rows: repeat(16, var(--square-size));
 }
-
-    /*플렉스*/
-.section_3 .container {
+}
+@media(min-width:1920px){
+    .section_3 .sushi,.section_3 .meal{
+    width: 1440px;
+    display:grid;
+    grid-template-columns: repeat(12,120px);
+    grid-template-rows: repeat(16, 120px);
+}
+}
+.section_3 h1{
+    font-size: 2rem;
+}
+.section_3 .meal_container {
+    padding-top: 50px;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.02),rgba(255,255,255,0));
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 80vw;
-    max-width: 1440px;
 }
-.section_3 .container .contents {
-    width: 270px;
-    height: 270px;
-    margin: 10px;
-    transition: all 0.4s;
+.section_3 .info h1{
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+    font-weight: 700;
 }
-.section_3 .container .info .title{
-    font-size: 1.5rem;
+.section_3 .text h1::after{
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: black;
     display: block;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 2px white solid;
+    margin: 10px 0;
 }
-.section_3 .container p{
-    color: white;
-    padding: 20px;
-    font-size: 0.9rem;
-    opacity: 0;
-}
-
-.section_3 .container .contents:hover p, .section_3 .container .contents:active p{
-    opacity: 1;
-}
-@media(max-width:1450px){
-    .section_3 .container .contents{
-        width: 220px;
-        height: 220px;
-    }
+.section_3 .text{
+    position: relative;
+    top: 10px;
+    font-size: 1rem;
 }
 @media(max-width:1200px){
-    .section_3 .container .contents{
-        width: 270px;
-        height: 270px;
+    .section_3 h1{
+        font-size: 1.5rem;
     }
-    .section_3 .container p{
+    .section_3 .text{
         font-size: 0.9rem;
     }
 }
-@media(max-width:760px){
-    .section_3 .head{
-        font-size: 2.8rem;
-        margin-bottom: 20px;
-    }
-}
 
-.section_3 .container .contents:hover{
-    transform: scale(1.05);
+    /*sushi contents*/
+.section_3 .sushi .info {
+    grid-column: 7/11;
+    grid-row: 1/3;
+    font-size: 1rem;
 }
-.section_3 .container .contents:nth-child(1){
-    background-image: url(img/nigiri.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.section_3 .container .contents:nth-child(2){
-    background-image: url(img/maki.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.section_3 .container .contents:nth-child(3){
+.section_3 .sushi .uramaki.photo {
+    grid-column: 1/6;
+    grid-row: 1/4;
     background-image: url(img/uramaki.jpg);
     background-size: cover;
     background-position: center;
 }
-.section_3 .container .contents:nth-child(4){
+.section_3 .sushi .uramaki.text {
+    grid-column: 1/6;
+    grid-row: 4/6;
+}
+
+.section_3 .sushi .inari.photo {
+    grid-column: 7/12;
+    grid-row: 4/7;
     background-image: url(img/inari2.jpg);
     background-size: cover;
     background-position: center;
 }
-.section_3 .container .contents:nth-child(5){
-    background-image: url(img/bento.jpg);
+.section_3 .sushi .inari.text {
+    grid-column: 7/12;
+    grid-row: 7/9;
+}
+
+.section_3 .sushi .maki.photo{
+    grid-column: 1/4;
+    grid-row: 7/10;
+    background-image: url(img/maki.jpg);
     background-size: cover;
     background-position: center;
 }
-.section_3 .container .contents:nth-child(6){
+.section_3 .sushi .maki.text{
+    grid-column: 1/4;
+    grid-row: 10/12;
+}
+
+.section_3 .sushi .nigiri.photo {
+    grid-column: 6/9;
+    grid-row: 10/13;
+    background-image: url(img/nigiri.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.section_3 .sushi .nigiri.text {
+    grid-column: 6/9;
+    grid-row: 13/16;
+}
+    /*meal contents*/
+.section_3 .meal .info {
+    grid-column: 2/5;
+    grid-row: 1/3;
+}
+.section_3 .meal .donburi.photo {
+    grid-column: 7/12;
+    grid-row: 1/4;
     background-image: url(img/donuri.jpg);
     background-size: cover;
     background-position: center;
 }
-.section_3 .container .contents:nth-child(7){
-    background-image: url(img/curry.jpg);
+.section_3 .meal .donburi.text {
+    grid-column: 7/12;
+    grid-row: 4/7;
+}
+
+.section_3 .meal .bento.photo{
+    grid-column: 2/5;
+    grid-row: 5/7;
+    background-image: url(img/bento.jpg);
     background-size: cover;
     background-position: center;
 }
-.section_3 .container .contents:nth-child(8){
+.section_3 .meal .bento.text{
+    grid-column: 2/5;
+    grid-row: 7/10;
+}
+
+.section_3 .meal .noodles.photo {
+    grid-column: 8/13;
+    grid-row: 7/10;
     background-image: url(img/noodles.jpg);
     background-size: cover;
     background-position: center;
 }
-.section_3 .container .contents:nth-child(1):hover, .section_3 .container .contents:nth-child(1):active{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/nigiri.jpg);
-}
-.section_3 .container .contents:nth-child(2):hover, .section_3 .container .contents:nth-child(2):active{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/maki.jpg);
-}
-.section_3 .container .contents:nth-child(3):hover, .section_3 .container .contents:nth-child(3):active{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/uramaki.jpg);
-}
-.section_3 .container .contents:nth-child(4):hover, .section_3 .container .contents:nth-child(4):active{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/inari2.jpg);
-}
-.section_3 .container .contents:nth-child(5):hover, .section_3 .container .contents:nth-child(5):active{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/bento.jpg);
-}
-.section_3 .container .contents:nth-child(6):hover, .section_3 .container .contents:nth-child(6):active{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/donuri.jpg);
-}
-.section_3 .container .contents:nth-child(7):hover, .section_3 .container .contents:nth-child(7):active{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/curry.jpg);
-}
-.section_3 .container .contents:nth-child(8):hover, .section_3 .container .contents:nth-child(8):active{
-    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.3)),url(img/noodles.jpg);
+.section_3 .meal .noodles.text {
+    grid-column: 8/13;
+    grid-row: 10/13;
 }
 
+.section_3 .meal .curry.photo {
+    grid-column: 3/6;
+    grid-row: 11/14;
+    background-image: url(img/curry.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.section_3 .meal .curry.text {
+    grid-column: 3/6;
+    grid-row: 14/17;
+}
+@media(max-width:1000px){
+    .section_3 .info h1{
+        margin-bottom: 5px;
+    }
+    .section_3 .info p{
+        display: none;
+    }
+    .section_3 .sushi .info {
+        grid-column: 7/13;
+    }
+    .section_3 .sushi .nigiri.text{
+        grid-column: 6/10;
+    }
+    .section_3 .sushi .inari.text{
+        grid-column: 7/13;
+    }
+    .section_3 .meal .info {
+        grid-column: 2/6
+    }
+    .section_3 .meal .donburi.text{
+        grid-column: 7/13;
+    }
+    .section_3 .meal .bento.text{
+        grid-column: 2/6;
+    }
+    .section_3 .meal .curry.text{
+        grid-column: 3/7;
+    }
+}
+@media(max-width:760px){
+    .section_3 .sushi, .section_3 .meal{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+    .section_3 .photo {
+        width: 100%;
+        height: 300px;
+        margin-top: 50px;
+    }
+    .section_3 .info{
+        text-align: center;
+    }
+    .section_3 .info h1{
+        margin-bottom: -30px;
+    }
+}
 /*장식*/
 #pattern_1 {
     position: absolute;
@@ -640,7 +719,11 @@ header.up{
         bottom: -20px;
     }
 }
-
+@media(max-width:1000px){
+    .section_4 .info p{
+        font-size: 1rem;
+    }
+}
 @media(max-width:765px){
     .section_4 {
         margin-top: 10px;
@@ -679,7 +762,7 @@ header.up{
     /*헤드*/
 .section_5 .head {
     font-size: 3.3rem;
-    font-weight: 800;
+    font-weight: 700;
     display: block;
     margin-bottom: 4.0rem;
     margin-top: 30px;
@@ -713,16 +796,6 @@ header.up{
     transition: all 0.2s;
 }
 
-    /*그리드 세팅*/
-/* .section_5 .container{
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: -40px;
-} */
 .section_5 .container{
     width: 100%;
 }
@@ -731,7 +804,7 @@ header.up{
     width: 100%;
     position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -739,15 +812,21 @@ header.up{
     display: none;
 }
     /*그리드 항목*/
-.section_5 .container  .info {
-    width: 320px;
-    margin: 2.2rem;
+.section_5 .container .info {
+    width: 300px;
+    margin: 1.2rem;
+    margin-bottom: 2rem;
     display: grid;
     grid-template-rows: 3rem 1rem 5rem 4rem 3rem;
     grid-row-gap: 1rem;
     align-items: center;
 }
-
+.section_5 .container [data-location="dunedin"] {
+    justify-content: space-around;
+}
+.section_5 .container [data-location="christchurch"] {
+    justify-content: space-around;
+}
 .section_5 .container .select .name {
     text-transform: uppercase;
     font-size: 2rem;
