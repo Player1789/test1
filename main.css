@@ -513,11 +513,15 @@ header.up{
     font-size: 1.3rem;
     font-weight: 700;
     padding: 0 20px;
-    margin-bottom: 10vw;
-    margin-top: 2vw;
+    margin-bottom: 20vw;
+    margin-top: 8vw;
 }
-
-
+@media(max-width:1400px){
+    .section_3 p.info{
+        margin-bottom: 10vw;
+        margin-top: 1vw;
+    }
+}
 
     /*sushi*/
 @media(max-width:1919px){
@@ -846,7 +850,7 @@ header.up{
     width: 75vw;
     max-width: 1440px;
     margin: 0 auto;
-    margin-top: 5rem;
+    margin-top: 15rem;
     margin-bottom: 20px;
 }
 
@@ -972,6 +976,11 @@ header.up{
     background-color: black;
     padding: 3px 20px;
     text-decoration: none;
+}
+@media(max-width:1400px){
+    .section_5{
+        margin-top: 10vw;
+    }
 }
 @media(max-width:1301px){
     .section_5 .container{
