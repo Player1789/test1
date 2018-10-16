@@ -282,6 +282,7 @@ header.up{
 @media (max-width:760px){
     .section_1 {
         display: flex;
+        height: 100vh;
     }
     .section_1 .photo {
         opacity: 0.9;
@@ -299,9 +300,13 @@ header.up{
         font-size: 4.3rem;
         margin-bottom: 14rem;
         letter-spacing: -1px;
+        text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
     }
     .section_1 .text nav li {
         margin-bottom: 3rem;
+    }
+    .section_1 .text nav li a{
+        box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
     }
 }
 
@@ -321,6 +326,7 @@ header.up{
     grid-column: 1/6;
     grid-row: 1/2;
     background-color: rgb(241,241,241);
+    z-index: -3;
 }
 
 .section_2 .photo{
@@ -330,6 +336,7 @@ header.up{
     background-image: url(img/hero_background.jpg);
     background-size: cover;
     background-position:left center;
+    z-index: 0;
 }
 
 .section_2 .text {
@@ -354,7 +361,6 @@ header.up{
     font-weight: 400;
     line-height: 1.6;
 }
-
 @media(max-width:1200px){
     .section_2{
         height: 800px;
@@ -405,6 +411,90 @@ header.up{
     }
 }
 
+    /* 스시, 웍, 벤또 */
+.section_2_container{
+    position: relative;
+}
+
+#sushi1{
+    position: absolute;
+    left: 5vw;
+    top: 50px;
+    z-index: -1;
+    width: 10vw;
+}
+#sushi2{
+    position: absolute;
+    right: -4vw;
+    z-index: -1;
+    transform: translateY(-80%); 
+    width: 22vw;
+}
+#sushi3{
+    position: absolute;
+    left: 0;
+    transform: translateY(70%);
+    z-index: 1;
+    width: 20vw;
+}
+
+#bento{
+    position: absolute;
+    right: -2%;
+    transform: translateY(-65%);
+    width: 25vw;
+}
+#wok{
+    position: absolute;
+    top: 120vw;
+    left: 0;
+    z-index: -2;
+    width: 25vw;
+    transform: translateY(10%);
+}
+@media(max-width:760px){
+    #sushi1, #sushi2, #sushi3, #bento, #wok, #edamame, #chopsticks{
+        display: none;
+    }
+}
+
+#edamame{
+    position: absolute;
+    right: -10%;
+    transform: translateY(-150%);
+    width: 26vw;
+}
+#chopsticks{
+    position: absolute;
+    right: 0;
+    z-index: -2;
+    transform: translateY(-50%);
+    width: 30vw;
+}
+
+/* bottle and sauce */
+#bottle, #sauce{
+    position: absolute;
+}
+#bottle {
+    transform: translateX(2vw);
+    z-index: -2;
+    width: 20vw;
+}
+#sauce{
+    right: 0;
+    z-index: -2;
+    width: 50vw;
+    transform: translateY(-60%);
+}
+
+@media(max-width:800px){
+    #sauce, #bottle{
+        display: none;
+    }
+}
+
+
 /*Section_3 Setting*/
 .section_3 {
     position: relative;
@@ -418,6 +508,17 @@ header.up{
     overflow-y: hidden;
     margin-top: 100px;
 }
+.section_3 p.info{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0 20px;
+    margin-bottom: 10vw;
+    margin-top: 2vw;
+}
+
+
+
     /*sushi*/
 @media(max-width:1919px){
 .section_3 .sushi,.section_3 .meal{
@@ -444,6 +545,8 @@ header.up{
     padding-top: 50px;
     width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.02),rgba(255,255,255,0));
+    background-size: cover;
+    background-position: bottom;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -628,19 +731,7 @@ header.up{
         margin-bottom: -30px;
     }
 }
-/*장식*/
-#pattern_1 {
-    position: absolute;
-    width: 600px;
-    right: -4vw;
-    z-index: -10;
-    top: 1200px;
-}
-@media(max-width:1400px){
-    #pattern_1{
-        display: none;
-    }
-}
+
 /*Section_4 Setting*/
     /*배경 세팅*/
 .section_4 {
@@ -954,35 +1045,11 @@ header.up{
     }
 }
 
-/*간장병과 간장*/
-#soysauce_bottle{
-    position: absolute;
-    top: -980px;
-    width: 40rem;
-    max-width: 700px;
-    z-index: -30;
-}
-
-#soysauce {
-    position: absolute;
-    width: 45rem;
-    max-width: 900px;
-    right: 0;
-    z-index: -10;
-    top: -2100px;
-}
-@media(max-width:1400px){
-    #soysauce_bottle, #soysauce{
-        display: none;
-    }
-}
-@media(max-width:1000px){
-    .section_6{
-        margin-top: 0;
-    }
-}
-
 /*Section_7 Setting*/
+.section_7_container{
+    position: relative;
+    width: 100vw;
+}
 .section_7 {
     position: relative;
     display: flex;
@@ -993,7 +1060,7 @@ header.up{
     max-width: 1120px;
     margin: 0 auto;
     margin-top: 15rem;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
 }
 
     /*플렉스 세팅*/
@@ -1043,7 +1110,6 @@ header.up{
 @media(max-width:750px){
     .section_7{
         margin-top: 50px;
-        z-index: -20;
         margin-bottom: 0px;
     }
 }
@@ -1066,10 +1132,20 @@ header.up{
 }
 /*Footer setting*/
 footer{
-    background-image: linear-gradient(to right,rgba(255,51,51,0.05), rgba(85,155,212,0.05));
     padding: 20px;
     padding-top: 40px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .line {
+    width: 200px;
+    height: 2px;
+    background-color: black;
+    text-align: center;
+    margin-bottom: 100px;
+    align-self: center;
 }
 footer .container {
     position: relative;
@@ -1089,7 +1165,7 @@ footer .logo_container{
 }
 footer .hello, footer .job{
     list-style: none;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-weight: 500;
     margin-bottom: 30px;
 }
@@ -1097,8 +1173,8 @@ footer .hello li, footer .job li{
     margin-bottom:20px;
 }
 footer .hello .title, footer .job .title{
-    font-size: 1.1rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 @media(min-width:780px){
