@@ -513,8 +513,7 @@ header.up{
     font-size: 1.3rem;
     font-weight: 700;
     padding: 0 20px;
-    margin-bottom: 20vw;
-    margin-top: 8vw;
+    margin-bottom: 6vw;
 }
 @media(max-width:1400px){
     .section_3 p.info{
@@ -531,7 +530,7 @@ header.up{
     --square-size: calc(var(--content-width)/12);
     display:grid;
     grid-template-columns: repeat(12,var(--square-size));
-    grid-template-rows: repeat(16, var(--square-size));
+    grid-template-rows: repeat(14, var(--square-size));
 }
 }
 @media(min-width:1920px){
@@ -539,7 +538,7 @@ header.up{
     width: 1440px;
     display:grid;
     grid-template-columns: repeat(12,120px);
-    grid-template-rows: repeat(16, 120px);
+    grid-template-rows: repeat(14, 120px);
 }
 }
 .section_3 h1{
@@ -602,38 +601,38 @@ header.up{
 
 .section_3 .sushi .inari.photo {
     grid-column: 7/12;
-    grid-row: 5/8;
+    grid-row: 4/7;
     background-image: url(img/inari2.jpg);
     background-size: cover;
     background-position: center;
 }
 .section_3 .sushi .inari.text {
     grid-column: 7/12;
-    grid-row: 8/10;
+    grid-row: 7/9;
 }
 
 .section_3 .sushi .maki.photo{
     grid-column: 1/4;
-    grid-row: 8/11;
+    grid-row: 7/10;
     background-image: url(img/maki.jpg);
     background-size: cover;
     background-position: center;
 }
 .section_3 .sushi .maki.text{
     grid-column: 1/4;
-    grid-row: 11/13;
+    grid-row: 10/12;
 }
 
 .section_3 .sushi .nigiri.photo {
     grid-column: 6/9;
-    grid-row: 11/14;
+    grid-row: 10/13;
     background-image: url(img/nigiri.jpg);
     background-size: cover;
     background-position: center;
 }
 .section_3 .sushi .nigiri.text {
     grid-column: 6/9;
-    grid-row: 14/17;
+    grid-row: 13/16;
 }
     /*meal contents*/
 .section_3 .meal .info {
@@ -654,38 +653,38 @@ header.up{
 
 .section_3 .meal .bento.photo{
     grid-column: 2/5;
-    grid-row: 5/7;
+    grid-row: 4/6;
     background-image: url(img/bento.jpg);
     background-size: cover;
     background-position: center;
 }
 .section_3 .meal .bento.text{
     grid-column: 2/5;
-    grid-row: 7/10;
+    grid-row: 6/9;
 }
 
 .section_3 .meal .noodles.photo {
     grid-column: 8/13;
-    grid-row: 7/10;
+    grid-row: 6/9;
     background-image: url(img/noodles.jpg);
     background-size: cover;
     background-position: center;
 }
 .section_3 .meal .noodles.text {
     grid-column: 8/13;
-    grid-row: 10/13;
+    grid-row: 9/12;
 }
 
 .section_3 .meal .curry.photo {
     grid-column: 3/6;
-    grid-row: 11/14;
+    grid-row: 9/12;
     background-image: url(img/curry.jpg);
     background-size: cover;
     background-position: center;
 }
 .section_3 .meal .curry.text {
     grid-column: 3/6;
-    grid-row: 14/17;
+    grid-row: 12/15;
 }
 @media(max-width:1000px){
     .section_3 .info h1{
